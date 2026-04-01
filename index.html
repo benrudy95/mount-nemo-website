@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mount Nemo Golf Club | Burlington, Ontario</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ═══════════════════════════════════ NAVIGATION ═══════════════════════════════════ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-main">MOUNT NEMO</span>
+                <span class="logo-sub">Golf Club</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#courses" class="nav-link">The Course</a></li>
+                <li><a href="#holes" class="nav-link">Scorecard</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#pricing" class="nav-link">Rates</a></li>
+                <li><a href="#contact" class="nav-link book-btn">Book a Tee Time</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Open Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════ HERO ═══════════════════════════════════ -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-eyebrow">Championship Golf &nbsp;·&nbsp; Est. 1973</p>
+            <h1 class="hero-title">MOUNT NEMO</h1>
+            <p class="hero-subtitle"><em>Golf Club &nbsp;·&nbsp; Burlington, Ontario</em></p>
+            <div class="hero-rule"></div>
+            <div class="hero-actions">
+                <a href="#courses" class="btn btn-gold">Explore the Course</a>
+                <a href="#contact" class="btn btn-ghost">Book a Tee Time</a>
+            </div>
+        </div>
+        <div class="hero-hills" aria-hidden="true">
+            <svg viewBox="0 0 1440 180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path d="M0,100 C180,75 320,130 540,95 C760,60 880,120 1100,90 C1260,68 1360,105 1440,85 L1440,180 L0,180 Z" fill="#1a3320" opacity="0.7"/>
+                <path d="M0,130 C140,115 260,145 480,125 C700,105 820,140 1040,120 C1200,104 1330,135 1440,115 L1440,180 L0,180 Z" fill="#1e3a26" opacity="0.85"/>
+                <path d="M0,155 C120,145 240,162 440,152 C640,142 760,158 960,148 C1120,140 1280,156 1440,146 L1440,180 L0,180 Z" fill="#243d2c"/>
+            </svg>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ STATS ROW ═══════════════════════════════════ -->
+    <section class="stats-row">
+        <div class="stats-inner">
+            <div class="stat-item">
+                <span class="stat-number">1973</span>
+                <span class="stat-label">Established</span>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat-item">
+                <span class="stat-number">18</span>
+                <span class="stat-label">Holes</span>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat-item">
+                <span class="stat-number">Par 71</span>
+                <span class="stat-label">Championship Course</span>
+            </div>
+            <div class="stat-sep"></div>
+            <div class="stat-item">
+                <span class="stat-number">2×</span>
+                <span class="stat-label">GTA Best Value Award</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ ABOUT ═══════════════════════════════════ -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-layout">
+                <div class="about-visual">
+                    <div class="about-img-wrap">
+                        <!-- Replace with: <img src="images/about.jpg" alt="Mount Nemo Golf Club"> -->
+                        <svg class="about-svg-scene" viewBox="0 0 520 480" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%"   stop-color="#1a3a55"/>
+                                    <stop offset="55%"  stop-color="#2d5c3a"/>
+                                    <stop offset="100%" stop-color="#1a3322"/>
+                                </linearGradient>
+                                <linearGradient id="hillBack" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#2a5538"/>
+                                    <stop offset="100%" stop-color="#1a3322"/>
+                                </linearGradient>
+                                <linearGradient id="hillMid" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#3a7048"/>
+                                    <stop offset="100%" stop-color="#2a5035"/>
+                                </linearGradient>
+                                <linearGradient id="hillFront" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#4a8855"/>
+                                    <stop offset="100%" stop-color="#2d5a38"/>
+                                </linearGradient>
+                                <linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#4a7a9a" stop-opacity="0.9"/>
+                                    <stop offset="100%" stop-color="#2a5570" stop-opacity="0.8"/>
+                                </linearGradient>
+                                <filter id="glow">
+                                    <feGaussianBlur stdDeviation="2" result="blur"/>
+                                    <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                                </filter>
+                            </defs>
+                            <!-- Sky -->
+                            <rect width="520" height="480" fill="url(#skyGrad)"/>
+                            <!-- Subtle cloud wisps -->
+                            <ellipse cx="120" cy="80" rx="70" ry="18" fill="rgba(255,255,255,0.04)"/>
+                            <ellipse cx="380" cy="60" rx="90" ry="14" fill="rgba(255,255,255,0.05)"/>
+                            <ellipse cx="260" cy="95" rx="55" ry="12" fill="rgba(255,255,255,0.03)"/>
+                            <!-- Toronto skyline silhouette (tiny, distant) -->
+                            <g fill="rgba(30,55,80,0.5)" transform="translate(0,0)">
+                                <rect x="55"  y="148" width="4"  height="22"/>
+                                <rect x="62"  y="155" width="6"  height="15"/>
+                                <rect x="71"  y="150" width="5"  height="20"/>
+                                <rect x="79"  y="158" width="8"  height="12"/>
+                                <rect x="90"  y="145" width="6"  height="25"/><!-- CN Tower base -->
+                                <rect x="92"  y="110" width="2"  height="38"/><!-- CN Tower spire -->
+                                <ellipse cx="93" cy="132" rx="5" ry="3"/><!-- CN Tower pod -->
+                                <rect x="101" y="153" width="7"  height="17"/>
+                                <rect x="111" y="156" width="5"  height="14"/>
+                                <rect x="119" y="150" width="9"  height="20"/>
+                                <rect x="131" y="158" width="6"  height="12"/>
+                                <rect x="140" y="154" width="8"  height="16"/>
+                                <rect x="151" y="160" width="5"  height="10"/>
+                                <rect x="159" y="155" width="7"  height="15"/>
+                            </g>
+                            <!-- Background escarpment ridge -->
+                            <path d="M0,200 C60,175 120,185 200,170 C280,155 340,180 400,165 C450,153 490,170 520,160 L520,260 L0,260 Z" fill="url(#hillBack)" opacity="0.85"/>
+                            <!-- Mid forest treeline -->
+                            <path d="M0,240 C40,225 80,235 130,222 C180,210 220,228 280,218 C330,208 380,224 430,215 C470,207 500,220 520,212 L520,310 L0,310 Z" fill="url(#hillMid)"/>
+                            <!-- Tree silhouettes mid -->
+                            <g fill="#1e4028">
+                                <path d="M30,235 L36,215 L42,235Z"/><rect x="33" y="235" width="6" height="12" fill="#1a3822"/>
+                                <path d="M60,228 L67,204 L74,228Z"/><rect x="63" y="228" width="8" height="14" fill="#1a3822"/>
+                                <path d="M90,232 L96,212 L102,232Z"/><rect x="93" y="232" width="6" height="12" fill="#1a3822"/>
+                                <path d="M200,225 L207,200 L214,225Z"/><rect x="203" y="225" width="8" height="14" fill="#1a3822"/>
+                                <path d="M230,220 L237,196 L244,220Z"/><rect x="233" y="220" width="8" height="15" fill="#1a3822"/>
+                                <path d="M310,222 L318,197 L326,222Z"/><rect x="314" y="222" width="8" height="14" fill="#1a3822"/>
+                                <path d="M380,218 L387,194 L394,218Z"/><rect x="383" y="218" width="8" height="15" fill="#1a3822"/>
+                                <path d="M420,215 L428,190 L436,215Z"/><rect x="424" y="215" width="8" height="16" fill="#1a3822"/>
+                                <path d="M480,220 L487,198 L494,220Z"/><rect x="483" y="220" width="8" height="14" fill="#1a3822"/>
+                            </g>
+                            <!-- Water hazard / pond -->
+                            <ellipse cx="175" cy="320" rx="70" ry="20" fill="url(#waterGrad)"/>
+                            <ellipse cx="175" cy="318" rx="65" ry="16" fill="rgba(100,170,220,0.15)"/>
+                            <!-- Water shimmer -->
+                            <line x1="135" y1="316" x2="155" y2="316" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
+                            <line x1="170" y1="320" x2="195" y2="320" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+                            <line x1="185" y1="315" x2="205" y2="315" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+                            <!-- Front fairway -->
+                            <path d="M0,310 C80,290 160,305 260,295 C360,285 440,300 520,290 L520,480 L0,480 Z" fill="url(#hillFront)"/>
+                            <!-- Fairway stripe highlights -->
+                            <path d="M0,350 C80,340 200,345 340,338 C420,334 480,340 520,336 L520,360 L0,360 Z" fill="rgba(90,160,90,0.12)"/>
+                            <path d="M0,375 C100,368 230,372 370,366 C440,363 490,368 520,365 L520,385 L0,385 Z" fill="rgba(90,160,90,0.08)"/>
+                            <!-- Putting green -->
+                            <ellipse cx="370" cy="305" rx="38" ry="16" fill="#5aaa60"/>
+                            <ellipse cx="370" cy="305" rx="34" ry="13" fill="#62b868"/>
+                            <!-- Flag -->
+                            <line x1="370" y1="305" x2="370" y2="265" stroke="#c9a84c" stroke-width="1.5"/>
+                            <polygon points="370,265 392,272 370,279" fill="#c9a84c"/>
+                            <!-- Bunkers -->
+                            <ellipse cx="330" cy="312" rx="18" ry="8" fill="rgba(220,200,160,0.55)"/>
+                            <ellipse cx="410" cy="308" rx="14" ry="7" fill="rgba(220,200,160,0.45)"/>
+                            <!-- Golf cart path suggestion -->
+                            <path d="M80,370 C140,360 220,355 300,348" stroke="rgba(200,185,155,0.3)" stroke-width="3" fill="none" stroke-dasharray="8,4"/>
+                            <!-- Foreground rough texture -->
+                            <path d="M0,440 C60,430 140,438 220,432 C300,426 380,434 460,428 C490,425 510,430 520,427 L520,480 L0,480 Z" fill="rgba(25,50,28,0.6)"/>
+                            <!-- Sun/light source glow at horizon -->
+                            <ellipse cx="260" cy="168" rx="80" ry="25" fill="rgba(200,168,80,0.06)"/>
+                            <ellipse cx="260" cy="168" rx="40" ry="12" fill="rgba(200,168,80,0.08)"/>
+                        </svg>
+                    </div>
+                    <div class="about-badge">
+                        <span class="badge-year">1973</span>
+                        <span class="badge-label">Founded</span>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <span class="section-label">Our Story</span>
+                    <h2 class="section-heading">Fifty Years of<br><em>Championship Golf</em></h2>
+                    <p class="about-lead">Since 1973, Mount Nemo Golf Club has been one of Burlington's most beloved golfing destinations — offering a true championship experience at remarkable value.</p>
+                    <p>Set against the breathtaking backdrop of the Niagara Escarpment, our Par 71 layout winds through rolling terrain and mature tree-lined fairways. Six water hazards challenge you on the front nine, while the back nine rewards accuracy through narrow corridors of deep forest. From the 11th tee, golfers are treated to a spectacular view of the Toronto skyline — one of the most iconic moments in Ontario golf.</p>
+                    <div class="about-features">
+                        <div class="af-item">
+                            <span class="af-diamond">◆</span>
+                            <div>
+                                <h4>Award-Winning Value</h4>
+                                <p>Toronto Sun Silver Award — Best Value Golf Course in the GTA (2011 &amp; 2012)</p>
+                            </div>
+                        </div>
+                        <div class="af-item">
+                            <span class="af-diamond">◆</span>
+                            <div>
+                                <h4>Scenic &amp; Challenging</h4>
+                                <p>Water hazards, deep forest fairways, and panoramic escarpment views</p>
+                            </div>
+                        </div>
+                        <div class="af-item">
+                            <span class="af-diamond">◆</span>
+                            <div>
+                                <h4>Full-Service Club</h4>
+                                <p>Pro shop, bar, patio, dining room, and complete tournament facilities</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ COURSE FEATURES ═══════════════════════════════════ -->
+    <section id="courses" class="courses">
+        <div class="container">
+            <span class="section-label center">What Awaits You</span>
+            <h2 class="section-heading center">The Mount Nemo Experience</h2>
+            <p class="section-sub">A single, unforgettable Par 71 layout that rewards every level of golfer — from the water-laden front nine to the forest fairways of the back.</p>
+        </div>
+        <div class="courses-grid">
+
+            <div class="course-card">
+                <div class="course-bg course-bg-1"></div>
+                <div class="course-overlay"></div>
+                <div class="course-content">
+                    <span class="course-badge">Front Nine</span>
+                    <h3>Water &amp; Fairways</h3>
+                    <p class="course-spec">Par 36 &nbsp;·&nbsp; 6 Water Hazards &nbsp;·&nbsp; Rolling Terrain</p>
+                    <ul class="course-list">
+                        <li>Six holes feature water hazards</li>
+                        <li>Strategic risk-reward tee shots</li>
+                        <li>Generously wide opening fairways</li>
+                    </ul>
+                    <div class="course-footer">
+                        <div class="course-price">Par <strong>36</strong><span>&nbsp;Front Nine</span></div>
+                        <a href="#holes" class="course-cta">View Scorecard <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-bg course-bg-2"></div>
+                <div class="course-overlay"></div>
+                <div class="course-content">
+                    <span class="course-badge">Back Nine</span>
+                    <h3>Forest &amp; Precision</h3>
+                    <p class="course-spec">Par 35 &nbsp;·&nbsp; Narrow Fairways &nbsp;·&nbsp; Deep Forests</p>
+                    <ul class="course-list">
+                        <li>Tight fairways demand accuracy</li>
+                        <li>Toronto skyline view from 11th tee</li>
+                        <li>Mature forest surrounds every hole</li>
+                    </ul>
+                    <div class="course-footer">
+                        <div class="course-price">Par <strong>35</strong><span>&nbsp;Back Nine</span></div>
+                        <a href="#holes" class="course-cta">View Scorecard <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-bg course-bg-3"></div>
+                <div class="course-overlay"></div>
+                <div class="course-content">
+                    <span class="course-badge">After Your Round</span>
+                    <h3>Clubhouse &amp; Events</h3>
+                    <p class="course-spec">Pro Shop &nbsp;·&nbsp; Bar &amp; Patio &nbsp;·&nbsp; Dining Room</p>
+                    <ul class="course-list">
+                        <li>Fully stocked pro shop</li>
+                        <li>Bar, patio &amp; beverage cart service</li>
+                        <li>Tournament &amp; event hosting</li>
+                    </ul>
+                    <div class="course-footer">
+                        <div class="course-price">Full<strong>&nbsp;Club</strong><span>&nbsp;Facilities</span></div>
+                        <a href="#contact" class="course-cta">Enquire <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ SIGNATURE HOLE ═══════════════════════════════════ -->
+    <section class="signature-hole">
+        <div class="sig-bg"></div>
+        <div class="sig-overlay"></div>
+        <div class="sig-content">
+            <span class="section-label light">Hole 11 &nbsp;·&nbsp; Par 5 &nbsp;·&nbsp; 550 Yards</span>
+            <h2 class="sig-title">The Most Iconic<br><em>View in Ontario Golf</em></h2>
+            <p class="sig-desc">From the 11th tee, the entire Toronto skyline unfolds across Lake Ontario — a breathtaking panorama visible on a clear day from the heights of the Niagara Escarpment. There is simply nowhere else like it in the GTA.</p>
+            <a href="#contact" class="btn btn-gold">Book Your Round</a>
+        </div>
+        <div class="sig-stat-strip">
+            <div class="sig-stat"><span>Par 5</span><small>Hole 11</small></div>
+            <div class="sig-stat"><span>550 yds</span><small>Championship Tees</small></div>
+            <div class="sig-stat"><span>H'cap 4</span><small>Stroke Index</small></div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ SCORECARD ═══════════════════════════════════ -->
+    <section id="holes" class="scorecard-section">
+        <div class="container">
+            <span class="section-label center">Course Guide</span>
+            <h2 class="section-heading center">The Championship 18</h2>
+            <p class="course-summary-line">Par 71 &nbsp;·&nbsp; Burlington, Ontario &nbsp;·&nbsp; Est. 1973</p>
+
+            <div class="sc-tabs">
+                <button class="sc-tab active" data-panel="front">Front Nine</button>
+                <button class="sc-tab" data-panel="back">Back Nine</button>
+            </div>
+
+            <!-- FRONT NINE -->
+            <div class="sc-panel active" id="front">
+                <div class="sc-head">
+                    <span>Hole</span><span>Name</span><span>Par</span><span class="hide-sm">Yards</span><span class="hide-sm">H'cap</span>
+                </div>
+                <div class="sc-row"><span class="sc-num">1</span><span class="sc-name"><strong>The Welcome</strong><em>Generous opener with a pond framing the right side of the green</em></span><span class="par par-4">4</span><span class="hide-sm">380</span><span class="hide-sm">11</span></div>
+                <div class="sc-row alt"><span class="sc-num">2</span><span class="sc-name"><strong>Creek's Run</strong><em>Winding creek follows the right side from tee all the way to the green</em></span><span class="par par-4">4</span><span class="hide-sm">405</span><span class="hide-sm">3</span></div>
+                <div class="sc-row"><span class="sc-num">3</span><span class="sc-name"><strong>The Climb</strong><em>Elevated tee shot over a natural hollow to an undulating green</em></span><span class="par par-3">3</span><span class="hide-sm">160</span><span class="hide-sm">17</span></div>
+                <div class="sc-row alt"><span class="sc-num">4</span><span class="sc-name"><strong>Valley Floor</strong><em>Flowing par-5 with a stream crossing at the 200-yard landing zone</em></span><span class="par par-5">5</span><span class="hide-sm">530</span><span class="hide-sm">5</span></div>
+                <div class="sc-row"><span class="sc-num">5</span><span class="sc-name"><strong>Lakeside</strong><em>Lake guards the entire left side — precision is rewarded, aggression punished</em></span><span class="par par-4">4</span><span class="hide-sm">395</span><span class="hide-sm">7</span></div>
+                <div class="sc-row alt"><span class="sc-num">6</span><span class="sc-name"><strong>The Jewel</strong><em>Signature hole — island-style green nearly surrounded by water on three sides</em></span><span class="par par-3">3</span><span class="hide-sm">170</span><span class="hide-sm">15</span></div>
+                <div class="sc-row"><span class="sc-num">7</span><span class="sc-name"><strong>Double Trouble</strong><em>The hardest hole on the front: deep bunkers left, dense trees right</em></span><span class="par par-4">4</span><span class="hide-sm">420</span><span class="hide-sm">1</span></div>
+                <div class="sc-row alt"><span class="sc-num">8</span><span class="sc-name"><strong>Back Water</strong><em>Reachable par-5, but a pond guards any aggressive line to the green</em></span><span class="par par-5">5</span><span class="hide-sm">545</span><span class="hide-sm">9</span></div>
+                <div class="sc-row"><span class="sc-num">9</span><span class="sc-name"><strong>The Turn</strong><em>Subtle dogleg closes the front nine with a water hazard lurking short left</em></span><span class="par par-4">4</span><span class="hide-sm">390</span><span class="hide-sm">13</span></div>
+                <div class="sc-total"><span>OUT</span><span></span><span>36</span><span class="hide-sm">3,395</span><span class="hide-sm"></span></div>
+            </div>
+
+            <!-- BACK NINE -->
+            <div class="sc-panel" id="back">
+                <div class="sc-head">
+                    <span>Hole</span><span>Name</span><span>Par</span><span class="hide-sm">Yards</span><span class="hide-sm">H'cap</span>
+                </div>
+                <div class="sc-row"><span class="sc-num">10</span><span class="sc-name"><strong>Into the Forest</strong><em>The back nine opens into a cathedral of mature trees — keep it straight</em></span><span class="par par-4">4</span><span class="hide-sm">400</span><span class="hide-sm">8</span></div>
+                <div class="sc-row alt"><span class="sc-num">11</span><span class="sc-name"><strong>Skyline</strong><em>Famous Toronto skyline view from the tee; one of Ontario's most iconic moments</em></span><span class="par par-5">5</span><span class="hide-sm">550</span><span class="hide-sm">4</span></div>
+                <div class="sc-row"><span class="sc-num">12</span><span class="sc-name"><strong>The Canopy</strong><em>Tight par-3 completely framed by towering trees — club selection is everything</em></span><span class="par par-3">3</span><span class="hide-sm">155</span><span class="hide-sm">16</span></div>
+                <div class="sc-row alt"><span class="sc-num">13</span><span class="sc-name"><strong>Cathedral Pines</strong><em>Majestic tree-lined fairway with a heavily protected green in the clearing</em></span><span class="par par-4">4</span><span class="hide-sm">420</span><span class="hide-sm">2</span></div>
+                <div class="sc-row"><span class="sc-num">14</span><span class="sc-name"><strong>The Gauntlet</strong><em>Narrowing fairway squeezed by dense forest — the most demanding tee shot on the back</em></span><span class="par par-4">4</span><span class="hide-sm">385</span><span class="hide-sm">10</span></div>
+                <div class="sc-row alt"><span class="sc-num">15</span><span class="sc-name"><strong>The Ravine</strong><em>Demands a precise carry over a natural ravine to a well-bunkered green</em></span><span class="par par-3">3</span><span class="hide-sm">145</span><span class="hide-sm">18</span></div>
+                <div class="sc-row"><span class="sc-num">16</span><span class="sc-name"><strong>Blind Faith</strong><em>Blind tee shot into a dogleg through the pines — course knowledge matters here</em></span><span class="par par-4">4</span><span class="hide-sm">415</span><span class="hide-sm">6</span></div>
+                <div class="sc-row alt"><span class="sc-num">17</span><span class="sc-name"><strong>The Escarpment</strong><em>Long, demanding par-4 playing into the prevailing wind off the escarpment</em></span><span class="par par-4">4</span><span class="hide-sm">445</span><span class="hide-sm">12</span></div>
+                <div class="sc-row"><span class="sc-num">18</span><span class="sc-name"><strong>Nemo's Challenge</strong><em>Signature closing hole — panoramic approach shot back toward the clubhouse</em></span><span class="par par-4">4</span><span class="hide-sm">430</span><span class="hide-sm">14</span></div>
+                <div class="sc-total"><span>IN</span><span></span><span>35</span><span class="hide-sm">3,345</span><span class="hide-sm"></span></div>
+            </div>
+
+            <div class="sc-grand-total">
+                <span>TOTAL</span><span></span><span>71</span><span class="hide-sm">6,740</span><span class="hide-sm"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ TESTIMONIALS ═══════════════════════════════════ -->
+    <section class="testimonials">
+        <div class="container">
+            <span class="section-label center light">Member Reviews</span>
+            <h2 class="section-heading center light">Golfers Love<br><em>Mount Nemo</em></h2>
+            <div class="testimonials-grid">
+
+                <div class="testimonial">
+                    <div class="t-quote">&ldquo;</div>
+                    <p class="t-text">The views from the 11th tee are absolutely breathtaking — the Toronto skyline in the distance with the escarpment behind you. There's nowhere else like it in the GTA.</p>
+                    <div class="t-author">
+                        <span class="t-name">David Hartley</span>
+                        <span class="t-title">Burlington Golf Enthusiast</span>
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="t-quote">&ldquo;</div>
+                    <p class="t-text">Fantastic value for money. The course is beautifully maintained, the staff are friendly, and the bar patio after a round is the perfect finishing touch. We come back every season.</p>
+                    <div class="t-author">
+                        <span class="t-name">Karen &amp; Paul Morrison</span>
+                        <span class="t-title">Regular Members Since 2015</span>
+                    </div>
+                </div>
+
+                <div class="testimonial">
+                    <div class="t-quote">&ldquo;</div>
+                    <p class="t-text">We hosted our company tournament here and everything was perfect — from the shotgun start to the dining room dinner. The team at Mount Nemo made it completely effortless.</p>
+                    <div class="t-author">
+                        <span class="t-name">James Thorpe</span>
+                        <span class="t-title">Corporate Event Organizer</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ GALLERY ═══════════════════════════════════ -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <span class="section-label center">Gallery</span>
+            <h2 class="section-heading center">Life at Mount Nemo</h2>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <div class="g-bg g-bg-1"></div>
+                <div class="g-caption">The Signature Front Nine</div>
+            </div>
+            <div class="gallery-item">
+                <div class="g-bg g-bg-2"></div>
+                <div class="g-caption">Skyline View — Hole 11</div>
+            </div>
+            <div class="gallery-item">
+                <div class="g-bg g-bg-3"></div>
+                <div class="g-caption">Clubhouse &amp; Patio</div>
+            </div>
+            <div class="gallery-item">
+                <div class="g-bg g-bg-4"></div>
+                <div class="g-caption">Water Hazard — Hole 6</div>
+            </div>
+            <div class="gallery-item">
+                <div class="g-bg g-bg-5"></div>
+                <div class="g-caption">Cathedral Pines — Hole 13</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ PRICING ═══════════════════════════════════ -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <span class="section-label center">Rates &amp; Tee Times</span>
+            <h2 class="section-heading center">Award-Winning Value</h2>
+            <p class="section-sub">Mount Nemo has been recognized as the GTA's best value golf course. Book online up to 11 days in advance for the best availability and exclusive online discounts.</p>
+            <div class="pricing-grid">
+
+                <div class="pricing-card">
+                    <div class="p-header">
+                        <span class="p-tier">Weekday Round</span>
+                        <div class="p-price"><sup>$</sup><strong>Call</strong><span>for rates</span></div>
+                    </div>
+                    <ul class="p-features">
+                        <li><i class="fas fa-check"></i>18 holes of championship golf</li>
+                        <li><i class="fas fa-check"></i>Book up to 7 days in advance</li>
+                        <li><i class="fas fa-check"></i>Online booking discounts available</li>
+                        <li><i class="fas fa-check"></i>Beverage cart service included</li>
+                    </ul>
+                    <a href="tel:9053352955" class="btn btn-outline-dark">Call to Book</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="p-popular">Best Availability</div>
+                    <div class="p-header">
+                        <span class="p-tier">Online Booking</span>
+                        <div class="p-price"><sup></sup><strong>11</strong><span>days advance</span></div>
+                    </div>
+                    <ul class="p-features">
+                        <li><i class="fas fa-check"></i>Book up to 11 days ahead</li>
+                        <li><i class="fas fa-check"></i>Exclusive online discounts</li>
+                        <li><i class="fas fa-check"></i>Full 18-hole round</li>
+                        <li><i class="fas fa-check"></i>Best tee time selection</li>
+                        <li><i class="fas fa-check"></i>Waiver completed once — valid for life</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-gold">Book Online</a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="p-header">
+                        <span class="p-tier">Group &amp; Tournaments</span>
+                        <div class="p-price"><sup></sup><strong>Custom</strong><span>packages</span></div>
+                    </div>
+                    <ul class="p-features">
+                        <li><i class="fas fa-check"></i>Shotgun starts available</li>
+                        <li><i class="fas fa-check"></i>Dining room &amp; event space</li>
+                        <li><i class="fas fa-check"></i>Corporate &amp; charity events</li>
+                        <li><i class="fas fa-check"></i>Dedicated tournament staff</li>
+                        <li><i class="fas fa-check"></i>Beverage cart &amp; catering</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline-dark">Enquire Now</a>
+                </div>
+
+            </div>
+            <p class="pricing-note"><i class="fas fa-info-circle"></i> Weekend &amp; holiday tee times can be booked by phone 1 day in advance. A signed waiver is required once and is valid for all future visits.</p>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ CONTACT ═══════════════════════════════════ -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-layout">
+
+                <div class="contact-info">
+                    <span class="section-label">Get in Touch</span>
+                    <h2 class="section-heading">Plan Your<br><em>Perfect Round</em></h2>
+                    <p class="contact-intro">Ready to experience Mount Nemo? Get in touch to book your tee time, enquire about a tournament, or find out more about what we offer.</p>
+                    <div class="contact-items">
+                        <div class="c-item">
+                            <div class="c-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div><h4>Location</h4><p>5377 Walkers Line<br>Burlington, ON L7M 0P9</p></div>
+                        </div>
+                        <div class="c-item">
+                            <div class="c-icon"><i class="fas fa-phone"></i></div>
+                            <div><h4>Phone</h4><p><a href="tel:9053352955">(905) 335-2955</a><br>Call to reserve your tee time</p></div>
+                        </div>
+                        <div class="c-item">
+                            <div class="c-icon"><i class="fas fa-clock"></i></div>
+                            <div><h4>Tee Times</h4><p>Phone: 1 day advance (Fri–Sun &amp; Holidays)<br>Phone: 7 days advance (Mon–Thu)<br>Online: 11 days in advance</p></div>
+                        </div>
+                        <div class="c-item">
+                            <div class="c-icon"><i class="fas fa-calendar-check"></i></div>
+                            <div><h4>Booking Note</h4><p>A signed waiver is required once<br>and remains valid for all future rounds</p></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrap">
+                    <form class="contact-form" id="contactForm">
+                        <h3>Request a Tee Time</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input type="text" placeholder="John Smith" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" placeholder="john@email.com" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="tel" placeholder="(905) 555-0000">
+                            </div>
+                            <div class="form-group">
+                                <label>Enquiry Type</label>
+                                <select>
+                                    <option value="">Select…</option>
+                                    <option>Tee Time Booking</option>
+                                    <option>Tournament / Group Event</option>
+                                    <option>Corporate Event</option>
+                                    <option>General Enquiry</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea placeholder="Group size, preferred date, special requirements…" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-gold btn-block">Send Message</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ FOOTER ═══════════════════════════════════ -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <span class="logo-main">MOUNT NEMO</span>
+                    <span class="logo-sub">Golf Club</span>
+                </div>
+                <p>Championship golf on the Niagara Escarpment<br>in Burlington, Ontario since 1973.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter / X"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h5>The Course</h5>
+                    <ul>
+                        <li><a href="#about">Our Story</a></li>
+                        <li><a href="#courses">Course Features</a></li>
+                        <li><a href="#holes">Scorecard</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Services</h5>
+                    <ul>
+                        <li><a href="#courses">Pro Shop</a></li>
+                        <li><a href="#courses">Bar &amp; Dining</a></li>
+                        <li><a href="#contact">Tournaments</a></li>
+                        <li><a href="#contact">Corporate Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Booking</h5>
+                    <ul>
+                        <li><a href="#pricing">Green Fees</a></li>
+                        <li><a href="#contact">Book Online</a></li>
+                        <li><a href="tel:9053352955">Call Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <h5>Stay Informed</h5>
+                <p>Get course updates, tournament news, and seasonal offers delivered to your inbox.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-gold">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Mount Nemo Golf Club. 5377 Walkers Line, Burlington, ON &nbsp;·&nbsp; <a href="tel:9053352955">(905) 335-2955</a></p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
