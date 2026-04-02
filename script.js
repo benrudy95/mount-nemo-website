@@ -140,3 +140,80 @@ if (newsletterForm) {
 document.body.style.opacity = '0';
 document.body.style.transition = 'opacity 0.55s ease';
 window.addEventListener('load', () => { document.body.style.opacity = '1'; });
+
+
+// ── Hero parallax ─────────────────────────────────────────────────
+// Moves the hero background at 40% of scroll speed for a depth effect.
+const heroBg     = document.querySelector('.hero-bg');
+const heroSection = document.querySelector('.hero');
+if (heroBg && heroSection) {
+    window.addEventListener('scroll', () => {
+        const scrolled = window.scrollY;
+        if (scrolled < heroSection.offsetHeight * 1.2) {
+            heroBg.style.transform = `translateY(${scrolled * 0.4}px)`;
+        }
+    }, { passive: true });
+}
+
+
+// ── Animated stat counters ────────────────────────────────────────
+// Counts from data-from to data-count when the element enters the viewport.
+function easeOutCubic(t) { return 1 - Math.pow(1 - t, 3); }
+
+const statCountEls = document.querySelectorAll('.stat-number[data-count]');
+if (statCountEls.length) {
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            const el      = entry.target;
+            const target  = parseInt(el.dataset.count, 10);
+            const from    = parseInt(el.dataset.from || '0', 10);
+            const dur     = 1600;
+            const startTs = performance.now();
+
+            function tick(now) {
+                const progress = Math.min((now - startTs) / dur, 1);
+                const val      = Math.round(from + (target - from) * easeOutCubic(progress));
+                el.textContent = val;
+                if (progress < 1) requestAnimationFrame(tick);
+            }
+            requestAnimationFrame(tick);
+            counterObserver.unobserve(el);
+        });
+    }, { threshold: 0.6 });
+
+    statCountEls.forEach(el => counterObserver.observe(el));
+}
+
+
+// ── Scrollspy — highlight active nav link ─────────────────────────
+// Marks the nav link whose section is currently in view.
+const spySections = Array.from(document.querySelectorAll('section[id]'));
+const spyLinks    = Array.from(document.querySelectorAll('.nav-menu .nav-link[href^="#"]'));
+
+if (spySections.length && spyLinks.length) {
+    const onSpyScroll = () => {
+        const scrollMid = window.scrollY + window.innerHeight / 3;
+        let active = spySections[0].id;
+        spySections.forEach(sec => {
+            if (sec.offsetTop <= scrollMid) active = sec.id;
+        });
+        spyLinks.forEach(a => {
+            a.classList.toggle('nav-active', a.getAttribute('href') === '#' + active);
+        });
+    };
+    window.addEventListener('scroll', onSpyScroll, { passive: true });
+    onSpyScroll();
+}
+
+
+// ── Directional about-section reveals ────────────────────────────
+// Replaces the generic fade-up on about-layout children with
+// slide-from-left (visual) and slide-from-right (text).
+const aboutChildren = document.querySelectorAll('.about-layout > *');
+aboutChildren.forEach((el, i) => {
+    el.classList.remove('fade-up');
+    el.classList.add(i === 0 ? 'reveal-left' : 'reveal-right');
+    // Re-use the existing revealObserver — it just adds 'visible'.
+});
+

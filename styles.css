@@ -373,7 +373,7 @@ ul    { list-style: none; }
 /* Scroll indicator */
 .hero-scroll {
     position: absolute;
-    bottom: 3rem;
+    bottom: 5rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 3;
@@ -1557,3 +1557,105 @@ ul    { list-style: none; }
 
     .sc-tab { padding: 1rem 1.5rem; flex: 1; text-align: center; }
 }
+
+
+/* ═══════════════════════════ ENHANCEMENTS ═══════════════════════════ */
+
+/* ── Hero entrance animations ────────────────────────────────────────
+   Each hero element fades up in sequence on page load.
+   animation-fill-mode: both keeps them invisible before their delay. */
+@keyframes heroFadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.hero-eyebrow { animation: heroFadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.25s both; }
+.hero-title   { animation: heroFadeUp 1.1s cubic-bezier(0.16,1,0.3,1) 0.42s both; }
+.hero-subtitle { animation: heroFadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.62s both; }
+.hero-rule    { animation: heroFadeUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.76s both; }
+.hero-actions { animation: heroFadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.90s both; }
+.hero-scroll  { animation: heroFadeUp 0.8s cubic-bezier(0.16,1,0.3,1) 1.15s both; }
+
+/* Extend hero-bg height so parallax shift doesn't expose a gap at top */
+.hero-bg {
+    top: -8%;
+    bottom: auto;
+    height: 116%;
+    will-change: transform;
+}
+
+/* ── Course card — gold sweep bar on hover ───────────────────────────
+   A 2px gradient bar sweeps left-to-right across the top of each card */
+.course-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(to right, var(--gold), rgba(201,168,76,0.3) 80%, transparent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.55s cubic-bezier(0.16,1,0.3,1);
+    z-index: 4;
+}
+.course-card:hover::before { transform: scaleX(1); }
+
+/* ── Scorecard row — inset gold left accent on hover ─────────────────
+   Uses box-shadow so it doesn't shift the grid layout */
+.sc-row {
+    box-shadow: inset 3px 0 0 transparent;
+    transition: background var(--fast) var(--ease),
+                box-shadow var(--fast) var(--ease);
+}
+.sc-row:hover     { box-shadow: inset 3px 0 0 var(--gold); }
+.sc-row.alt:hover { box-shadow: inset 3px 0 0 var(--gold); }
+
+/* ── Featured pricing card — gold top rule ───────────────────────────*/
+.pricing-card.featured {
+    border-top: 2px solid var(--gold);
+}
+
+/* ── Nav active link (set by scrollspy JS) ───────────────────────────*/
+.nav-link.nav-active { color: var(--cream); }
+.nav-link.nav-active::after { width: 100%; }
+
+/* ── Testimonial stars ───────────────────────────────────────────────*/
+.t-stars {
+    display: block;
+    color: var(--gold);
+    font-size: 0.68rem;
+    letter-spacing: 0.3em;
+    margin-bottom: 0.5rem;
+    opacity: 0.85;
+}
+
+/* ── Gallery index number ────────────────────────────────────────────*/
+.g-index {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.4rem;
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    color: rgba(245,237,224,0.22);
+    z-index: 2;
+    font-family: var(--f-body);
+    transition: color var(--mid-t) var(--ease);
+}
+.gallery-item:hover .g-index { color: rgba(245,237,224,0.5); }
+
+/* ── Directional reveals for about section ───────────────────────────*/
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.95s cubic-bezier(0.16,1,0.3,1),
+                transform 0.95s cubic-bezier(0.16,1,0.3,1);
+}
+.reveal-left.visible  { opacity: 1; transform: translateX(0); }
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.95s cubic-bezier(0.16,1,0.3,1),
+                transform 0.95s cubic-bezier(0.16,1,0.3,1);
+}
+.reveal-right.visible { opacity: 1; transform: translateX(0); }
+
